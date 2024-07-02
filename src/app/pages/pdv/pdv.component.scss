@@ -1,0 +1,382 @@
+#divPai{
+    display: flex;
+    width: 100%;
+    height: 100vh; /* 100% da altura da janela */
+}
+
+.statusPdv{
+    margin-top: 2%;
+    background-color: #ebe8fd;
+    border-radius: 5px;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #8b51fd;
+}
+
+
+#divParcialMaior{
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+#divParcialMenor{
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.divLeitorCodigoBarras{
+    margin-top: 1%;
+    height: 5%;
+    border-color: ccc;
+}
+.divLeitorCodigoBarras input {
+    width: 100%;
+    border-radius: 5px;
+    height: 70%;
+    border: solid 1px; /* Defina a espessura da borda conforme necessário */
+    border-color: rgba(133, 83, 246, 0.2); /* Cor da borda com 50% de opacidade */
+    background: none;
+}
+
+
+
+.btnsPdv{
+    margin-top: 2%;
+    margin-left: 1%;
+    background: none;
+    border: none;
+    padding: 2%;
+    height: 5%;
+    border-radius:5px;
+    width: 25%;
+    font-size: 15px;
+    cursor: pointer;
+    
+
+}
+
+.btnsPdv#btnSairPdv {
+    color: #8553f6;
+    background-color: #eae8f3;
+    width: 140px;
+    
+}
+
+.divBtnPdvSair{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2%;
+    margin-top: 4%;
+}
+.btnsPdv#btnSelecaoClientes {
+    background-color: #8b51fd;
+    color: white;
+    height: 50px;
+    width: 200px;
+    
+
+    
+}
+
+.btnsPdv#BtnApagarSelecoes {
+    background-color: #f64d61;
+    color: white;
+    width: 40%;
+    height: 50px;
+}
+
+.btnsPdv#BtnFinalizarVenda {
+    background-color: #75dcd8;
+    color: white;
+    width: 100%;
+    padding: 0;
+    height: 8%;
+    font-size: 20px;
+    
+}
+
+.btnsPdv#BtnBuscarVenda {
+    background-color: #8553f6;
+    color: white;
+    width: 40%;
+    height: 50px;
+    
+}
+
+.btnsPdv#BtnSelecionarVendedor{
+    background-color: #8553f6;
+   
+}
+
+
+
+
+
+.btnsPdv:hover{
+    background-color: #bba3f3;
+}
+
+.mat-icon{
+    font-size: 25px;
+}
+
+.outrasAcoesVenda{
+    display: flex;
+    height: 10%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right: 2%;
+}
+
+.linha-separadora {
+    border-top: 1px solid #ccc; /* Adiciona uma borda superior para criar a linha */
+    margin: 3% 0; /* Define a margem para espaçamento */
+}
+
+.divTotalVendaPdv{
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 2%;
+
+  
+    
+   
+}
+
+.totalizadoresPdv{
+    display: flex;
+    flex-direction: column; 
+    gap: 5%;
+    font-size: 20px;
+    justify-content: center; 
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: #ebe8fd;
+}
+
+.txtTotais{
+    font-weight: 700;
+}
+
+.txtTotal{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.SubValorVenda{
+    font-size: 30px;
+    margin-top: 4%;
+    font-weight: 400;
+    color: #8b51fd;
+  
+}
+.valorVenda{
+    font-size: 50px;
+    margin-top: 4%;
+    font-weight: 400;
+    color: #8b51fd;
+}
+
+.form-pagamento{
+    margin-top: 2%;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+#valorRecebido{
+    margin-top: 10px;
+    width: 80%;
+    height: 30%;
+   
+    
+}
+
+
+#selecaoPagamento{
+    height: 50px;
+    border: solid 0.5px;
+    background: none;
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    border-color: #ccc;
+}
+
+select option {
+    padding-left: 5px;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+}
+
+#valorRecebido{
+    border: solid 0.5px;
+    border-radius: 5px;
+    border-color: #ccc;
+}
+
+
+#valorRecebido::placeholder{
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#divValorTroco{
+    display: flex;
+    background-color: #ebe8fd;
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #8b51fd;
+}
+
+#valorTroco{
+    font-weight: bold;
+}
+
+.selecaoProdutos{
+    height: 80%;
+}
+
+.iconePdvVazio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    
+}
+
+.iconePdvVazio .mat-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 40%;
+    font-size: 200px;
+    color: #8b51fd;
+    opacity: 0.2;
+}
+
+// @media (max-width: 900px) { 
+//     .btnsPdv .text {
+//         display: none;
+//     }
+
+//     .valorVenda{
+//         font-size: 20px;
+//         margin-top: 4%;
+//         font-weight: 400;
+//     }
+
+//     #divValorTroco{
+//         font-size: 20px;
+//         display: flex;
+//         flex-direction: column; 
+//         align-items: center; 
+       
+//     }
+
+
+//     .divTotalVendaPdv{
+//         height: 10%;
+//     }
+
+//     #valorRecebido{
+//         height: 15%;
+//     }
+// }
+
+
+@media (max-width: 900px) { 
+    .btnsPdv .text {
+        display: none;
+    }
+    inputCodigoBarras
+    .outrasAcoesVenda{
+        display: none;
+    }
+
+
+    #btnOutrasAcoesPdv{
+        display: none;
+    }
+
+    .valorVenda{
+        font-size: 20px;
+        margin-top: 4%;
+        font-weight: 400;
+      
+      
+    }
+
+    #divValorTroco{
+        font-size: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+       
+    }
+
+
+    // .divTotalVendaPdv{
+    //     height: 25%;
+
+    // }
+
+    #valorRecebido{
+        height: 25%;
+    }
+
+
+    #divPai{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #divParcialMaior{
+        display: block;
+        width: 70%;
+        height: 100%;
+    }
+    
+    #divParcialMenor{
+        margin-top: 10%;
+        display: inline-block;
+        width: 100%;
+        height: 40%;
+        flex-wrap: wrap;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+   
+        
+    }
+
+    .linha-separadora{
+        display: none;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,106 @@
+<div id="divPai">
+    <div id="divParcialMaior">
+        <div class="statusPdv"> PRONTO PARA VENDA</div>
+        <div class="divLeitorCodigoBarras">
+            <input class="inputCodigoBarras" placeholder="Insira o código do produto" [(ngModel)]="codigoProduto" (keyup.enter)="adicionarProduto(codigoProduto)">
+        </div>
+
+        <div *ngIf="produtos.length==0" class="iconePdvVazio">
+            <mat-icon>remove_shopping_cart</mat-icon>
+        </div>
+   
+
+        <div *ngIf="produtos.length > 0" class="selecaoProdutos" style=" overflow: scroll;">
+            <div class="container-selecoes-pdv" >
+              <table class="lista-produtos-pdv" style="border-collapse: collapse; width: 100%; background-color: #f2f2f2;">
+                <thead>
+                  <tr>
+                    <th style="padding: 8px;  vertical-align: middle;">Descrição</th>
+                    <th style="padding: 8px;">Quantidade</th>
+                    <th style="padding: 8px; vertical-align: middle;">Desconto</th>
+                    <th style="padding: 8px; vertical-align: middle;">Preço</th>
+                  </tr>
+                </thead>
+    
+                
+               
+    
+                <tbody style="line-height: 1.5;" >
+                  <ng-container *ngFor="let produto of produtos; let i = index "   class="linha-produto">
+    
+                    
+                    <tr [style.background-color]="i % 2 === 0 ? '#ffffff': '#ebe8fd' ">
+                      <td style="padding: 8px; vertical-align: middle;">{{produto.nome}}</td>
+                      <td style="padding: 8px; vertical-align: middle;">{{produto.quantidade | number:'1.2-2'}} </td>
+                      <td style="padding: 8px; vertical-align: middle;">0</td>
+                      <td style="padding: 8px;  align-items: middle;">R$ {{produto.preco | number:'1.2-2'}}</td>
+                    </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+
+      </div>
+      
+
+    <div id="divParcialMenor">
+        <div class="divBtnPdvSair">
+            <button class="btnsPdv" id="btnSairPdv">
+                <span class="text">Sair do Pdv</span>
+                <mat-icon style="vertical-align: middle;">exit_to_app &nbsp;</mat-icon>
+            </button>
+            </div>
+        <div class="linha-separadora"></div>
+
+        <div class="outrasAcoesVenda">
+            <button class="btnsPdv" id="btnSelecaoClientes">
+                <span class="text">Vincular Cliente</span>
+                <mat-icon style="vertical-align: middle;">perm_identity</mat-icon>
+            </button>
+
+            <button class="btnsPdv" id="BtnApagarSelecoes" (click)="descartarVenda()">
+                <span class="text">Descartar Venda</span>
+                <mat-icon style="vertical-align: middle;">delete</mat-icon>
+            </button>
+        </div>
+
+        <div class="linha-separadora"></div>
+
+        <div class="totalizadoresPdv">
+
+            <div class="divTotalBrutoPdv">
+                <p class="txtTotais">TOTAL BRUTO: </p>
+                <div class="SubValorVenda">R$ {{totalVenda | number:'1.2-2'}}</div>
+            </div>
+
+            <div class="divTotalAcrescimosPdv">
+                <p class="txtTotais">ACRÉSCIMOS:</p>
+                <div class="SubValorVenda">R$ {{totalAcrescimos | number:'1.2-2'}}</div>
+            </div>
+
+            <div class="divTotalDescontosPdv">
+                <p class="txtTotais">DESCONTOS:</p>
+                <div class="SubValorVenda">R$ {{totalDescontos | number:'1.2-2'}}</div>
+            </div>
+
+            <div class="divTotalVendaPdv" id="totalVenda">
+                <p class="txtTotal">TOTAL:</p>
+                <div class="valorVenda">R$ {{totalVenda | number:'1.2-2'}}</div>
+            </div>
+
+        </div>
+
+        
+        <div id="divValorTroco">
+            <span class="text">Troco&nbsp;</span>
+            <div id="valorTroco">R$ 0,00</div>
+        </div>
+
+        <button class="btnsPdv" id="BtnFinalizarVenda">
+            <span class="text">Finalizar venda</span>
+            <mat-icon  style="vertical-align: middle; width: 30px; height: 30px;">shopping_cart</mat-icon>
+        </button>
+    </div>
+</div>
