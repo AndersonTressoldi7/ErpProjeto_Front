@@ -7,6 +7,7 @@
 
         <div *ngIf="produtos.length==0" class="iconePdvVazio">
             <mat-icon>remove_shopping_cart</mat-icon>
+            <span> Não há produtos selecionados... </span>
         </div>
    
 
@@ -71,30 +72,31 @@
         <div class="totalizadoresPdv">
 
             <div class="divTotalBrutoPdv">
-                <p class="txtTotais">TOTAL BRUTO: </p>
+                <p class="txtSubTotais">TOTAL BRUTO: </p>
                 <div class="SubValorVenda">R$ {{totalVenda | number:'1.2-2'}}</div>
             </div>
 
             <div class="divTotalAcrescimosPdv">
-                <p class="txtTotais">ACRÉSCIMOS:</p>
+                <p class="txtSubTotais">ACRÉSCIMOS:</p>
                 <div class="SubValorVenda">R$ {{totalAcrescimos | number:'1.2-2'}}</div>
             </div>
 
             <div class="divTotalDescontosPdv">
-                <p class="txtTotais">DESCONTOS:</p>
+                <p class="txtSubTotais">DESCONTOS:</p>
                 <div class="SubValorVenda">R$ {{totalDescontos | number:'1.2-2'}}</div>
             </div>
 
             <div class="divTotalVendaPdv" id="totalVenda">
-                <p class="txtTotal">TOTAL:</p>
+                <div class="txtTotal">TOTAL:</div>
                 <div class="valorVenda">R$ {{totalVenda | number:'1.2-2'}}</div>
             </div>
+            
 
         </div>
 
         
         <div id="divValorTroco">
-            <span class="text">Troco&nbsp;</span>
+            <p class="textTroco">Troco&nbsp;</p>
             <div id="valorTroco">R$ 0,00</div>
         </div>
 

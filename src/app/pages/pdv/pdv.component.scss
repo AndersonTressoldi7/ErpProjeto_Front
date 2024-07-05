@@ -78,8 +78,8 @@
 .btnsPdv#btnSelecaoClientes {
     background-color: #8b51fd;
     color: white;
+    width: 40%;
     height: 50px;
-    width: 200px;
     
 
     
@@ -117,6 +117,9 @@
 
 
 
+.textTroco{
+    margin: 0;
+}
 
 
 .btnsPdv:hover{
@@ -131,7 +134,7 @@
     display: flex;
     height: 10%;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     margin-right: 2%;
 }
 
@@ -141,7 +144,7 @@
 }
 
 .divTotalVendaPdv{
-    flex-direction: column; /* Organiza os itens em uma coluna */
+    flex-direction: row; /* Organiza os itens em uma coluna */
     justify-content: center; /* Centraliza os itens verticalmente */
     width: 100%;
     border-radius: 10px;
@@ -165,13 +168,16 @@
     background-color: #ebe8fd;
 }
 
-.txtTotais{
+.txtSubTotais{
     font-weight: 700;
+    margin-left: 5px;
 }
 
 .txtTotal{
     font-weight: 500;
     font-size: 30px;
+    margin-left: 5px;
+
 }
 
 .SubValorVenda{
@@ -179,6 +185,8 @@
     margin-top: 4%;
     font-weight: 400;
     color: #8b51fd;
+    margin-left: 5px;
+
   
 }
 .valorVenda{
@@ -186,6 +194,8 @@
     margin-top: 4%;
     font-weight: 400;
     color: #8b51fd;
+    margin-left: 5px;
+
 }
 
 .form-pagamento{
@@ -250,6 +260,7 @@ select option {
 
 #valorTroco{
     font-weight: bold;
+    
 }
 
 .selecaoProdutos{
@@ -261,6 +272,8 @@ select option {
     align-items: center;
     justify-content: center;
     height: 80%;
+    flex-direction: column;
+    opacity: 0.2;
     
 }
 
@@ -272,74 +285,93 @@ select option {
     height: 40%;
     font-size: 200px;
     color: #8b51fd;
-    opacity: 0.2;
 }
 
-// @media (max-width: 900px) { 
-//     .btnsPdv .text {
-//         display: none;
-//     }
+ @media (max-width: 900px) { 
+     .btnsPdv .text {
+         display: none;
+     }
 
-//     .valorVenda{
-//         font-size: 20px;
-//         margin-top: 4%;
-//         font-weight: 400;
-//     }
+     .iconePdvVazio .mat-icon{
+        width: 50%;
+        height: 40%;
+    }
 
-//     #divValorTroco{
-//         font-size: 20px;
-//         display: flex;
-//         flex-direction: column; 
-//         align-items: center; 
-       
-//     }
+ }
 
 
-//     .divTotalVendaPdv{
-//         height: 10%;
-//     }
-
-//     #valorRecebido{
-//         height: 15%;
-//     }
-// }
+@media (max-width: 700px) { 
 
 
-@media (max-width: 900px) { 
+
+
+    #divParcialMaior{
+        display: inline-block;
+        width: 100%;
+        height: 70%;
+        flex-wrap: wrap;
+    }
+    
+    #divParcialMenor{
+        display: inline-block;
+        width: 100%;
+        height: 30%;
+        flex-wrap: wrap;
+    }
+    
+
     .btnsPdv .text {
         display: none;
     }
     inputCodigoBarras
     .outrasAcoesVenda{
-        display: none;
+        height: 10px;
     }
 
 
     #btnOutrasAcoesPdv{
         display: none;
+        width: 20px;
     }
 
     .valorVenda{
-        font-size: 20px;
+        font-size: 30px;
         margin-top: 4%;
         font-weight: 400;
-      
-      
+        // width: 100%;
+        margin: 0;
     }
 
-    #divValorTroco{
+    #divValorTroco {
         font-size: 20px;
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
-       
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; 
+        gap: 10px;
+        margin-top: 2%;
     }
+    
+  
+    
+    #valorTroco {
+        font-weight: bold;
+        white-space: nowrap; /* Impedir quebra de linha */
+        margin: 0;
+    }
+    
 
 
-    // .divTotalVendaPdv{
-    //     height: 25%;
+     .divTotalVendaPdv{
+         height: 25%;
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
 
-    // }
+         
+
+     }
 
     #valorRecebido{
         height: 25%;
@@ -351,12 +383,6 @@ select option {
         flex-direction: column;
     }
 
-    #divParcialMaior{
-        display: block;
-        width: 70%;
-        height: 100%;
-    }
-    
     #divParcialMenor{
         margin-top: 10%;
         display: inline-block;
@@ -374,6 +400,51 @@ select option {
     .linha-separadora{
         display: none;
     }
+
+    .txtSubTotais, .divTotalDescontosPdv, .divTotalAcrescimosPdv, .divTotalBrutoPdv{
+        display: none;
+    }
+    .totalizadoresPdv{
+        height: 20%;
+    }
+
+    .outrasAcoesVenda{
+        height: 25%;
+        width: 100%;
+    }
+
+    .totalizadoresPdv{
+        width: 100%;
+        display: flex;
+        white-space: nowrap;
+        padding: 10px;
+        // background-color: red;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .txtTotal{
+        width: 30%;
+    }
+
+    .textTroco{
+        margin: 0;
+    }
+
+    .divValorTroco{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btnsPdv#BtnFinalizarVenda {
+        height: 15%;
+        }
+
+        .divLeitorCodigoBarras{
+            height: 10%;
+        }
+
+    
 }
 
 
