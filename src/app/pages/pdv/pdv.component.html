@@ -1,5 +1,6 @@
 <div id="divPai">
     <div id="divParcialMaior">
+        
         <div class="statusPdv"> PRONTO PARA VENDA</div>
         <div class="divLeitorCodigoBarras">
             <input class="inputCodigoBarras" placeholder="Insira o código do produto" [(ngModel)]="codigoProduto" (keyup.enter)="adicionarProduto(codigoProduto)">
@@ -10,31 +11,25 @@
             <span> Não há produtos selecionados... </span>
         </div>
    
-
         <div *ngIf="produtos.length > 0" class="selecaoProdutos" style=" overflow: scroll;">
             <div class="container-selecoes-pdv" >
               <table class="lista-produtos-pdv" style="border-collapse: collapse; width: 100%; background-color: #f2f2f2;">
                 <thead>
                   <tr>
-                    <th style="padding: 8px;  vertical-align: middle;">Descrição</th>
-                    <th style="padding: 8px;">Quantidade</th>
-                    <th style="padding: 8px; vertical-align: middle;">Desconto</th>
-                    <th style="padding: 8px; vertical-align: middle;">Preço</th>
+                    <th class="titulosProdutoListadosPdv">Descrição</th>
+                    <th class="titulosProdutoListadosPdv">Quantidade</th>
+                    <th class="titulosProdutoListadosPdv">Desconto</th>
+                    <th class="titulosProdutoListadosPdv">Preço</th>
                   </tr>
                 </thead>
-    
-                
-               
-    
+
                 <tbody style="line-height: 1.5;" >
-                  <ng-container *ngFor="let produto of produtos; let i = index "   class="linha-produto">
-    
-                    
+                  <ng-container *ngFor="let produto of produtos; let i = index "   class="linha-produto">                    
                     <tr [style.background-color]="i % 2 === 0 ? '#ffffff': '#ebe8fd' ">
-                      <td style="padding: 8px; vertical-align: middle;">{{produto.nome}}</td>
-                      <td style="padding: 8px; vertical-align: middle;">{{produto.quantidade | number:'1.2-2'}} </td>
-                      <td style="padding: 8px; vertical-align: middle;">0</td>
-                      <td style="padding: 8px;  align-items: middle;">R$ {{produto.preco | number:'1.2-2'}}</td>
+                      <td class="produtosListadosPdv">{{produto.nome}}</td>
+                      <td class="produtosListadosPdv">{{produto.quantidade | number:'1.2-2'}} </td>
+                      <td class="produtosListadosPdv">0</td>
+                      <td class="produtosListadosPdv">R$ {{produto.preco | number:'1.2-2'}}</td>
                     </tr>
                   </ng-container>
                 </tbody>
@@ -42,10 +37,8 @@
             </div>
           </div>
         
-
       </div>
       
-
     <div id="divParcialMenor">
         <div class="divBtnPdvSair">
             <button class="btnsPdv" id="btnSairPdv">
@@ -90,11 +83,9 @@
                 <div class="txtTotal">TOTAL:</div>
                 <div class="valorVenda">R$ {{totalVenda | number:'1.2-2'}}</div>
             </div>
-            
-
+        
         </div>
 
-        
         <div id="divValorTroco">
             <p class="textTroco">Troco&nbsp;</p>
             <div id="valorTroco">R$ 0,00</div>
