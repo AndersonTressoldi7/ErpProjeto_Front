@@ -258,6 +258,7 @@ select option {
 
 .selecaoProdutos{
     height: 80%;
+    overflow: scroll;
 }
 
 .iconePdvVazio{
@@ -279,6 +280,21 @@ select option {
     font-size: 200px;
     color: #8b51fd;
 }
+
+.lista-produtos-pdv{
+    border-collapse: collapse;
+    width: 100%; 
+    background-color: #f2f2f2;
+}
+
+.listaDadosProdutos{
+    line-height: 1.5;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
 
  @media (max-width: 900px) { 
      .btnsPdv .text {
