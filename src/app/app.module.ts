@@ -8,13 +8,15 @@ import { PrimeIcons } from 'primeng/api';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatIconModule } from '@angular/material/icon';
 import { MatIcon } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms'; // Import the FormsModule
+import { FormsModule } from '@angular/forms';
+import { DialogPerguntasComponent } from './componentes/dialog-perguntas/dialog-perguntas.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PdvComponent,
+    DialogPerguntasComponent,
   ],
   imports: [
     BrowserModule,

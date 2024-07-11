@@ -1,0 +1,44 @@
+.dialog {
+    backdrop-filter: blur(8px);
+}
+
+.dataMensagem{
+    font-size: 25px;
+}
+
+.totalDialogPergunta{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.dialogPergunta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 60%;  
+}
+
+.botoesPergunta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 30%;
+    
+}
+
+#btnSim, #btnNao{
+    border: none;
+    margin: 2px;
+    height: 100%;
+    width: 40%;
+    border-radius: 5px;
+
+}
+
+#btnNao{
+    background-color: #8b51fd;
+}

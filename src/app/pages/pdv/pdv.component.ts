@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { utils } from '../../../utils';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-pdv',
   templateUrl: './pdv.component.html',
   styleUrl: './pdv.component.scss'
 })
-export class PdvComponent implements OnInit{
+export class PdvComponent{
 
   public produtos: produtos[] = [];
   public codigoProduto: any;
@@ -13,9 +15,7 @@ export class PdvComponent implements OnInit{
   public totalDescontos: number = 0;
   public totalAcrescimos: number = 0;
 
-  ngOnInit(): void {
-    
-  }
+  constructor(private dialog: MatDialog){}
 
   adicionarProduto(codigoProduto: string){
 
@@ -34,6 +34,8 @@ export class PdvComponent implements OnInit{
   descartarVenda(){
     this.produtos = [];
     this.totalVenda = 0;
+
+    utils.exibirPergunta(this.dialog, "Deseja realmente cancelar está venda?")
 
   }
 
