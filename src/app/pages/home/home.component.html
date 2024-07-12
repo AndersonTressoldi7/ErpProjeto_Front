@@ -1,10 +1,51 @@
 <app-nav-bar></app-nav-bar>
 
 <div class="divMaior">
-    <div class="homeOpcoes"> <mat-icon>account_balance_wallet</mat-icon> Div 1</div>
-    <div class="homeOpcoes">Div 2</div>
-    <div class="homeOpcoes">Div 3</div>
-    <div class="homeOpcoes">Div 4</div>
-    <div class="homeOpcoes">Div 5</div>
-    <div class="homeOpcoes">Div 6</div>
+
+    
+    <a class="homeOpcoes">
+        <p class="textoHome">Crediário</p>
+        <div class="IconHome">
+            <mat-icon class="HomeIcones">folder_shared</mat-icon> 
+        </div>
+    </a>
+
+    <a class="homeOpcoes" [routerLink]="'/pdv'">
+        <p class="textoHome">Pdv</p>
+        <div class="IconHome">
+            <mat-icon class="HomeIcones">shopping_basket</mat-icon> 
+        </div>
+    </a>
+
+    <a class="homeOpcoes">
+        <p class="textoHome">Relatórios</p>
+        <div class="IconHome">
+            <mat-icon class="HomeIcones">poll</mat-icon> 
+        </div>
+    </a>
+
+
+    <a class="homeOpcoes">
+        <p class="textoHome">Estoque</p>
+        <div class="IconHome">
+            <mat-icon class="HomeIcones">widgets</mat-icon> 
+        </div>
+    </a>
+
+
+    <a class="homeOpcoes">
+        <p class="textoHome">Pessoas</p>
+        <div class="IconHome">
+            <mat-icon class="HomeIcones">group</mat-icon> 
+        </div>
+    </a>
+
+
+    <div class="homeOpcoes">
+        <p class="textoHome">Configurações</p>
+        <div class="IconHome">
+            <mat-icon class="HomeIcones">settings</mat-icon> 
+        </div>
+    </div>
+
 </div>
