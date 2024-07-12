@@ -11,9 +11,13 @@
             <span> Não há produtos selecionados... </span>
         </div>
    
+<<<<<<< HEAD
         <div *ngIf="produtos.length > 0" class="selecaoProdutos" style=" overflow: scroll;">
+=======
+        <div *ngIf="produtos.length > 0" class="selecaoProdutos">
+>>>>>>> 4ae4a4886aebafbfc8ebe0877145a659da69ac76
             <div class="container-selecoes-pdv" >
-              <table class="lista-produtos-pdv" style="border-collapse: collapse; width: 100%; background-color: #f2f2f2;">
+              <table class="lista-produtos-pdv">
                 <thead>
                   <tr>
                     <th class="titulosProdutoListadosPdv">Descrição</th>
@@ -23,7 +27,11 @@
                   </tr>
                 </thead>
 
+<<<<<<< HEAD
                 <tbody style="line-height: 1.5;" >
+=======
+                <tbody class="listaDadosProdutos" >
+>>>>>>> 4ae4a4886aebafbfc8ebe0877145a659da69ac76
                   <ng-container *ngFor="let produto of produtos; let i = index "   class="linha-produto">                    
                     <tr [style.background-color]="i % 2 === 0 ? '#ffffff': '#ebe8fd' ">
                       <td class="produtosListadosPdv">{{produto.nome}}</td>
@@ -39,6 +47,7 @@
         
       </div>
       
+<<<<<<< HEAD
     <div id="divParcialMenor">
         <div class="divBtnPdvSair">
             <button class="btnsPdv" id="btnSairPdv" (click)="sairDoPdv()">
@@ -47,18 +56,30 @@
             </button>
             </div>
         <div class="linha-separadora"></div>
+=======
+<div id="divParcialMenor">
+    <div class="divBtnPdvSair">
+        <button class="btnsPdv" id="btnSairPdv">
+            <span class="text">Sair do Pdv</span>
+            <mat-icon class="icon">exit_to_app &nbsp;</mat-icon>
+        </button>
+    </div>
+    <div class="linha-separadora"></div>
 
-        <div class="outrasAcoesVenda">
-            <button class="btnsPdv" id="btnSelecaoClientes">
-                <span class="text">Vincular Cliente</span>
-                <mat-icon style="vertical-align: middle;">perm_identity</mat-icon>
-            </button>
+    <div class="outrasAcoesVenda">
+        <button class="btnsPdv" id="btnSelecaoClientes">
+            <span class="text">Vincular Cliente</span>
+            <mat-icon class="icon">perm_identity</mat-icon>
+        </button>
 
-            <button class="btnsPdv" id="BtnApagarSelecoes" (click)="descartarVenda()">
-                <span class="text">Descartar Venda</span>
-                <mat-icon style="vertical-align: middle;">delete</mat-icon>
-            </button>
-        </div>
+        <button class="btnsPdv" id="BtnApagarSelecoes" (click)="descartarVenda()">
+            <span class="text">Descartar Venda</span>
+            <mat-icon class="icon">delete</mat-icon>
+        </button>
+    </div>
+>>>>>>> 4ae4a4886aebafbfc8ebe0877145a659da69ac76
+
+
 
         <div class="linha-separadora"></div>
 
