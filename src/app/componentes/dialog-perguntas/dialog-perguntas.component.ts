@@ -14,5 +14,9 @@ export class DialogPerguntasComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: { mensagem: string },
   private dialogRef: MatDialogRef<DialogPerguntasComponent>){}
 
+  fecharDialog(resposta: boolean){
+    return this.dialogRef.close(resposta);
+   }
+
 
 }

@@ -14,6 +14,7 @@ export class PdvComponent{
   public totalVenda: number = 0;
   public totalDescontos: number = 0;
   public totalAcrescimos: number = 0;
+  public confirmacao:boolean = false;
 
   constructor(private dialog: MatDialog){}
 
@@ -31,12 +32,22 @@ export class PdvComponent{
     this.codigoProduto = '';
   }
 
-  descartarVenda(){
-    this.produtos = [];
-    this.totalVenda = 0;
+  async descartarVenda(){
+    this.confirmacao = await utils.exibirPergunta(this.dialog, "Deseja realmente cancelar esta venda?");
+    
+    if(this.confirmacao){
+      this.produtos = [];
+      this.totalVenda = 0;
+    }
+  }
 
-    utils.exibirPergunta(this.dialog, "Deseja realmente cancelar está venda?")
-
+  async sairDoPdv(){
+    this.confirmacao = await utils.exibirPergunta(this.dialog, "Deseja realmente sair do PDV?");
+    
+    if(this.confirmacao){
+      console.log('saindo do pdv...');
+    }
+    
   }
 
 }

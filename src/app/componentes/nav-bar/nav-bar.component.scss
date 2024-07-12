@@ -1,0 +1,47 @@
+
+
+.navbarDivMaior {
+    background-color: #8553f6; 
+    color: #8553f6; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+}
+
+.navbarLogo a {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 1.5rem; 
+}
+
+.navbarNavegacao {
+    list-style-type: none;
+    display: flex;
+}
+
+.navegacaoItem{
+    margin-right: 15px; 
+}
+
+.navegacaoItem a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navegacaoItem a:hover {
+    text-decoration: underline;
+}
+
+.mat-icon{
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+@media (max-width: 700px) { 
+    .textoOpcoesNav{
+        display: none;
+    }
+    
+}

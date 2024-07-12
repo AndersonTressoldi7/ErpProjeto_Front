@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatIcon } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { DialogPerguntasComponent } from './componentes/dialog-perguntas/dialog-perguntas.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { DialogPerguntasComponent } from './componentes/dialog-perguntas/dialog-
     AppComponent,
     PdvComponent,
     DialogPerguntasComponent,
+    HomeComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
