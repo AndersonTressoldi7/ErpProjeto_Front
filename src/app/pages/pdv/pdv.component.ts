@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { utils } from '../../../utils';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pdv',
@@ -16,7 +17,7 @@ export class PdvComponent{
   public totalAcrescimos: number = 0;
   public confirmacao:boolean = false;
 
-  constructor(private dialog: MatDialog){}
+  constructor(private dialog: MatDialog, private router: Router){}
 
   adicionarProduto(codigoProduto: string){
 
@@ -45,10 +46,12 @@ export class PdvComponent{
     this.confirmacao = await utils.exibirPergunta(this.dialog, "Deseja realmente sair do PDV?");
     
     if(this.confirmacao){
-      console.log('saindo do pdv...');
+      this.router.navigate(['/home']);
     }
     
   }
+
+  
 
 }
 

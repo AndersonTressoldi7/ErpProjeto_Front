@@ -16,16 +16,14 @@
     height: 70%;
     width: 70%;
     border-radius: 10px;
-    // flex: 1 1 30%;
     display: flex;
     justify-content:center;
     align-items: center;
     color: #fff;
-    // vertical-align: middle;
     cursor: pointer;
     flex-direction: column;
     float: bottom;
-   
+    text-decoration: none;
 }
 
 .textoHome{
@@ -34,7 +32,6 @@
 }
 
 .mat-icon{
-    // position: absolute;
     color: #fff;
     transform: scale(6);
     height: auto;
@@ -55,4 +52,24 @@
 .IconHome:hover {
     transform: scale(1.2);
     
+}
+
+@media (max-width: 700px) { 
+    .IconHome {
+        transform: scale(2); 
+    }
+
+    .mat-icon {
+        transform: scale(2); 
+    }
+
+    .textoHome{
+        font-size: 20px;
+    }
+
+    .IconHome:hover {
+        transform: scale(2.5);
+        
+    }
+
 }
