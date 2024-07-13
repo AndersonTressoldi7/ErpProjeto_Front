@@ -1,0 +1,104 @@
+.filtroListagemProdutos{
+    height: 20%;
+}
+
+.tituloFiltros{
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #afa2fb;
+    margin-left: 1%;
+}
+
+.checkboxFiltros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #afa2fb;
+    gap: 2%;
+    vertical-align: middle;
+}
+
+.checkbox{
+    appearance: none;
+    background-color: #f0efef;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+}
+
+.inputsFiltros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    height: 20%;
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: #afa2fb;
+}
+
+.inputFiltro{
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #f0efef;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    margin-right: 5%;
+    width: 25%;
+    height: 90%;
+    
+
+}
+
+.selecaoProdutos{
+    height: 80%;
+    overflow: scroll;
+    margin-top: 1%;
+}
+
+.containerSelecoesPdv{
+    height: 100% ;
+}
+
+
+.linhaProduto{
+    grid-template-columns: 2fr 1fr 1fr; 
+}
+.listaProdutosPdv{
+    border-collapse: collapse;
+    width: 100%; 
+    background-color: #f2f2f2;
+    height: 8%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: #afa2fb;
+   
+    
+}
+
+.produtosListadosPdv {
+    padding: 10px; 
+    text-align: center; 
+}
+
+.iconesLista{
+    vertical-align: middle;
+    width: 14%;
+    height: 100%;
+    font-size: 100%;
+}
+
+.iconesLista:hover{
+    transform: scale(1.3);
+}
+

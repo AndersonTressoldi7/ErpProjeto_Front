@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { DialogPerguntasComponent } from './componentes/dialog-perguntas/dialog-perguntas.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
-
+import { ListagemProdutosComponent } from './pages/produtos/listagem-produtos/listagem-produtos.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
     DialogPerguntasComponent,
     HomeComponent,
     NavBarComponent,
+    ListagemProdutosComponent,
   ],
   imports: [
     BrowserModule,

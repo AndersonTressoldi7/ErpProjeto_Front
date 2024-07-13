@@ -1,0 +1,47 @@
+<app-nav-bar></app-nav-bar>
+<div class="filtroListagemProdutos">
+    <h3 class="tituloFiltros">Filtros</h3>
+    <div class="checkboxFiltros">
+        <label class="checkboxContainer">
+            <input class="checkbox" type="checkbox">Produtos com estoque
+        </label>
+        <label class="checkboxContainer">
+            <input class="checkbox" type="checkbox">Produtos sem estoque
+        </label>
+        <label class="checkboxContainer">
+            <input class="checkbox" type="checkbox">Produtos ativos
+        </label>
+        <label class="checkboxContainer">
+            <input class="checkbox" type="checkbox">Produtos inativos
+        </label>
+    </div>
+
+
+
+    <div class="inputsFiltros">
+        Código &nbsp;<input class="inputFiltro">
+        Descrição &nbsp;<input class="inputFiltro">
+
+    </div>
+
+</div>
+
+<div *ngIf="1==1" class="selecaoProdutos">
+    <div class="containerSelecoesPdv" >
+      <table class="listaProdutosPdv">
+        <tbody class="listaDadosProdutos" >
+          <ng-container>                    
+            <tr [style.background-color]="1 % 2 === 0 ? '#ffffff': '#ebe8fd'" class="linhaProduto" (click)="funcaoTeste()">
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> border_color</mat-icon> Id: 1</td>
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista">search</mat-icon> tênis Nike</td>
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista">widgets</mat-icon> Estoque: 1 </td>
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> attach_money</mat-icon> R$ 4.99 </td>
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> edit_location</mat-icon> Ref.: AW1258</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
