@@ -55,21 +55,19 @@
 }
 
 @media (max-width: 700px) { 
-    .IconHome {
-        transform: scale(2); 
-    }
+     .IconHome {
+       font-size: 20px; 
+     }
 
     .mat-icon {
-        transform: scale(2); 
+        font-size: 20px; 
     }
 
     .textoHome{
         font-size: 20px;
     }
 
-    .IconHome:hover {
-        transform: scale(2.5);
-        
-    }
+  
+    
 
 }
