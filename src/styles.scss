@@ -54,6 +54,12 @@ p {
     margin-bottom: 0;
 }
 
+input{
+	appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
 
 
 html, body { height: 100%; }

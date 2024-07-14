@@ -13,6 +13,8 @@ import { DialogPerguntasComponent } from './componentes/dialog-perguntas/dialog-
 import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { ListagemProdutosComponent } from './pages/produtos/listagem-produtos/listagem-produtos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,13 @@ import { ListagemProdutosComponent } from './pages/produtos/listagem-produtos/li
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    MatTooltipModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    
   ],
   bootstrap: [AppComponent]
 })

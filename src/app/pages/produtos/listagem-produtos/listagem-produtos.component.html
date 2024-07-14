@@ -19,8 +19,8 @@
 
 
     <div class="inputsFiltros">
-        Código &nbsp;<input class="inputFiltro">
-        Descrição &nbsp;<input class="inputFiltro">
+        Código<input class="inputFiltro">
+        Descrição<input class="inputFiltro">
 
     </div>
 
@@ -31,17 +31,19 @@
       <table class="listaProdutosPdv">
         <tbody class="listaDadosProdutos" >
           <ng-container>                    
-            <tr [style.background-color]="1 % 2 === 0 ? '#ffffff': '#ebe8fd'" class="linhaProduto" (click)="funcaoTeste()">
-              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> border_color</mat-icon> Id: 1</td>
-              <td class="produtosListadosPdv"> <mat-icon class="iconesLista">search</mat-icon> tênis Nike</td>
-              <td class="produtosListadosPdv"> <mat-icon class="iconesLista">widgets</mat-icon> Estoque: 1 </td>
-              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> attach_money</mat-icon> R$ 4.99 </td>
-              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> edit_location</mat-icon> Ref.: AW1258</td>
+            <tr *ngFor="let produto of produtos; let i = index "  [style.background-color]="i % 2 === 0 ? '#ebe8fd': '#ffffff'" class="linhaProduto" (click)="carregarProdutos()">
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> border_color</mat-icon> Id: {{ produto.id }}</td>
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista">search</mat-icon> {{ produto.nome }}</td>
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista">widgets</mat-icon> Estoque: {{ produto.quantidade }} </td>
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> attach_money</mat-icon> R$ {{ produto.preco }} </td>
+              <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> edit_location</mat-icon> Ref.: {{ produto.referencia }}</td>
             </tr>
           </ng-container>
         </tbody>
       </table>
     </div>
   </div>
+
+  <div class="btnCadastroProduto" matTooltip="Clique aqui para cadastrar um novo produto">+</div>
 
 
