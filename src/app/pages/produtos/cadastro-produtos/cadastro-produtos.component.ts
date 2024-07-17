@@ -11,7 +11,7 @@ export class CadastroProdutosComponent {
 
   constructor(
     public dialogRef: MatDialogRef<CadastroProdutosComponent>,
-    @Inject(MAT_DIALOG_DATA) public produto: Produto
+    @Inject(MAT_DIALOG_DATA) public produto: Produto 
   ) { }
 
   salvarProduto(){
