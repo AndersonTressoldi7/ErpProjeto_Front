@@ -36,7 +36,7 @@
       <table class="listaProdutosPdv">
         <tbody class="listaDadosProdutos" >
           <ng-container>                    
-            <tr *ngFor="let produto of produtos; let i = index "  [style.background-color]="i % 2 === 0 ? '#ebe8fd': '#ffffff'" class="linhaProduto" (click)="carregarProdutos()">
+            <tr *ngFor="let produto of produtos; let i = index "  [style.background-color]="i % 2 === 0 ? '#ebe8fd': '#ffffff'" class="linhaProduto" (click)="abrirProduto(produto.id)">
               <td class="produtosListadosPdv"> <mat-icon class="iconesLista"> border_color</mat-icon> Id: {{ produto.id }}</td>
               <td class="produtosListadosPdv"> <mat-icon class="iconesLista">search</mat-icon> {{ produto.nome }}</td>
               <td class="produtosListadosPdv"> <mat-icon class="iconesLista">widgets</mat-icon> Estoque: {{ produto.quantidade }} </td>
@@ -49,7 +49,7 @@
     </div>
   </div>
 
-  <div class="btnCadastroProduto" matTooltip="Clique aqui para cadastrar um novo produto">+</div>
+  <div class="btnCadastroProduto" matTooltip="Clique aqui para cadastrar um novo produto" (click)="abrirProduto(id)">+</div>
 </div>
 
 

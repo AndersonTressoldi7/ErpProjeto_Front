@@ -20,10 +20,12 @@ export class ProdutoService {
   
 
   
-  TodosOsProdutos():Observable<Produto[]>{
+  buscarTodosOsProdutos():Observable<Produto[]>{
     return this.httpClient.get<Produto[]>(this.apiUrl); 
-
-
-
   }
+
+  buscarProdutoEspecifico(id:number):Observable<Produto>{
+    return this.httpClient.get<Produto>(this.apiUrl + '/' + id)
+  }
+
 }

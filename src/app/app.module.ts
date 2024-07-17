@@ -15,6 +15,7 @@ import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { ListagemProdutosComponent } from './pages/produtos/listagem-produtos/listagem-produtos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { CadastroProdutosComponent } from './pages/produtos/cadastro-produtos/cadastro-produtos.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     HomeComponent,
     NavBarComponent,
     ListagemProdutosComponent,
+    CadastroProdutosComponent,
   ],
   imports: [
     BrowserModule,

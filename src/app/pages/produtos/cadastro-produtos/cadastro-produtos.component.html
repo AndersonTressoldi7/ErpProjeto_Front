@@ -1,0 +1,81 @@
+<div class="tituloCadastros">
+  <h1>Cadastro de Produtos <mat-icon>add_shopping_cart</mat-icon></h1>
+</div>
+<div class="divMaior">
+  <div class="grupoInputs" >
+    <label for="idProduto">ID</label>
+    <input type="text" id="idProduto" name="idProduto" [ngModel]="produto.id">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="codigoBarras">Código</label>
+    <input type="text" id="codigoBarras" name="codigoBarras" [ngModel]="produto.codigoBarras">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="nomeProduto">nome</label>
+    <input type="text" id="nomeProduto" name="nomeProduto" [ngModel]="produto.nome">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="observacao">Observação</label>
+    <textarea id="observacao" name="observacao" [ngModel]="produto.observacao"></textarea>
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="categoria">Categoria</label>
+    <input type="text" id="categoria" name="categoria" [ngModel]="produto.categoria">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="marca">Marca</label>
+    <input type="text" id="marca" name="marca" [ngModel]="produto.marca">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="sku">SKU</label>
+    <input type="text" id="sku" name="sku" [ngModel]="produto.sku">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="precoVenda">Preço de Venda</label>
+    <input type="text" id="precoVenda" name="precoVenda" [ngModel]="produto.preco">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="quantidadeEstoque">Quantidade em Estoque</label>
+    <input type="text" id="quantidadeEstoque" name="quantidadeEstoque" [ngModel]="produto.quantidade">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="unidadeMedida">Unidade de Medida</label>
+    <input type="text" id="unidadeMedida" name="unidadeMedida" [ngModel]="produto.unidadeMedida">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="peso">Peso</label>
+    <input type="text" id="peso" name="peso" [ngModel]="produto.peso">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="dimensoes">Dimensões (C x L x A)</label>
+    <input type="text" id="dimensoes" name="dimensoes" [ngModel]="produto.dimensoes">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="dataEntradaEstoque">Data de Entrada em Estoque</label>
+    <input type="date" id="dataEntradaEstoque" name="dataEntradaEstoque" [ngModel]="produto.dataEntradaEstoque">
+  </div>
+
+  <div class="grupoInputs" >
+    <label for="status">Status</label>
+    <select id="status" name="status" [ngModel]="produto.status">
+      <option value="ativo">Ativo</option>
+      <option value="inativo">Inativo</option>
+    </select>
+  </div>
+
+  <div class="grupoFormularioCompleto" >
+    <button type="submit" (click)="salvarProduto()">Salvar</button>
+  </div>
+</div>
