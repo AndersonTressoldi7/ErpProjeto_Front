@@ -1,81 +1,94 @@
 <div class="tituloCadastros">
-  <h1>Cadastro de Produtos <mat-icon>add_shopping_cart</mat-icon></h1>
+  <h1>Cadastro de Produtos <mat-icon>add_shopping_cart</mat-icon></h1><br>
 </div>
 <div class="divMaior">
-  <div class="grupoInputs" >
-    <label for="idProduto">ID</label>
-    <input type="text" id="idProduto" name="idProduto" [value]="produto?.id">
-  </div>
 
-  <div class="grupoInputs" >
-    <label for="codigoBarras">Código</label>
-    <input type="text" id="codigoBarras" name="codigoBarras" [value]="produto?.codigoBarras">
-  </div>
+    <form [formGroup]="form" (ngSubmit)="salvarProduto()">
 
-  <div class="grupoInputs" >
-    <label for="nomeProduto">nome</label>
-    <input type="text" id="nomeProduto" name="nomeProduto" [value]="produto?.nome">
-  </div>
+      <div class="grupoInputs">
+        <label for="id">Id</label>
+        <input id="id" formControlName="id" required />
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="observacao">Observação</label>
-    <textarea id="observacao" name="observacao" [value]="produto?.observacao"></textarea>
-  </div>
+      <div class="grupoInputs">
+        <label for="codigoBarras">Código de Barras</label>
+        <input id="codigoBarras" formControlName="codigoBarras" required />
+      </div>
+    
+      <div class="grupoInputs">
+        <label for="nomeProduto">Nome</label>
+        <input type="text" id="nomeProduto" name="nomeProduto" [value]="produto?.nome" formControlName="nome">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="categoria">Categoria</label>
-    <input type="text" id="categoria" name="categoria" [value]="produto?.categoria">
-  </div>
+      
+      <div class="grupoInputs">
+        <label for="categoria">Categoria</label>
+        <input type="text" id="categoria" name="categoria" [value]="produto?.categoria" formControlName="categoria">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="marca">Marca</label>
-    <input type="text" id="marca" name="marca" [value]="produto?.marca">
-  </div>
 
-  <div class="grupoInputs" >
-    <label for="sku">SKU</label>
-    <input type="text" id="sku" name="sku" [value]="produto?.sku">
-  </div>
+      <div class="grupoInputs">
+        <label for="marca">Marca</label>
+        <input type="text" id="marca" name="marca" [value]="produto?.marca" formControlName="marca">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="precoVenda">Preço de Venda</label>
-    <input type="text" id="precoVenda" name="precoVenda" [value]="produto?.preco">
-  </div>
+      <div class="grupoInputs">
+        <label for="sku">SKU</label>
+        <input type="text" id="sku" name="sku" [value]="produto?.sku" formControlName="sku">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="quantidadeEstoque">Quantidade em Estoque</label>
-    <input type="text" id="quantidadeEstoque" name="quantidadeEstoque" [value]="produto?.quantidade">
-  </div>
+      <div class="grupoInputs">
+        <label for="precoVenda">Preço de Venda</label>
+        <input type="text" id="precoVenda" name="precoVenda" [value]="produto?.preco" formControlName="preco">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="unidadeMedida">Unidade de Medida</label>
-    <input type="text" id="unidadeMedida" name="unidadeMedida" [value]="produto?.unidadeMedida">
-  </div>
+      <div class="grupoInputs">
+        <label for="quantidadeEstoque">Quantidade em Estoque</label>
+        <input type="text" id="quantidadeEstoque" name="quantidadeEstoque" [value]="produto?.quantidade" formControlName="quantidade">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="peso">Peso</label>
-    <input type="text" id="peso" name="peso" [value]="produto?.peso">
-  </div>
+      <div class="grupoInputs">
+        <label for="unidadeMedida">Unidade de Medida</label>
+        <input type="text" id="unidadeMedida" name="unidadeMedida" [value]="produto?.unidadeMedida" formControlName="unidadeMedida">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="dimensoes">Dimensões (C x L x A)</label>
-    <input type="text" id="dimensoes" name="dimensoes" [value]="produto?.dimensoes">
-  </div>
+      <div class="grupoInputs">
+        <label for="peso">Peso</label>
+        <input type="text" id="peso" name="peso" [value]="produto?.peso" formControlName="peso">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="dataEntradaEstoque">Data de Entrada em Estoque</label>
-    <input type="date" id="dataEntradaEstoque" name="dataEntradaEstoque" [value]="produto?.dataEntradaEstoque">
-  </div>
+      <div class="grupoInputs">
+        <label for="dimensoes">Dimensões (C x L x A)</label>
+        <input type="text" id="dimensoes" name="dimensoes" [value]="produto?.dimensoes" formControlName="dimensoes">
+      </div>
 
-  <div class="grupoInputs" >
-    <label for="status">Status</label>
-    <select id="status" name="status" [value]="produto?.status">
-      <option value="ativo">Ativo</option>
-      <option value="inativo">Inativo</option>
-    </select>
-  </div>
+      <div class="grupoInputs">
+        <label for="dataEntradaEstoque">Data de Entrada em Estoque</label>
+        <input type="date" id="dataEntradaEstoque" name="dataEntradaEstoque" [value]="produto?.dataEntradaEstoque" formControlName="dataEntradaEstoque">
+      </div>
 
-  <div class="grupoFormularioCompleto" >
-    <button type="submit" (click)="salvarProduto()">Salvar</button>
-  </div>
+      <div class="grupoInputs">
+        <label for="status">Status</label>
+        <select id="status" name="status" [value]="produto?.status" formControlName="status">
+          <option value="ativo">Ativo</option>
+          <option value="inativo">Inativo</option>
+        </select>
+      </div>
+
+
+      <div class="grupoInputs">
+        <label for="referencia" id="referencia">Referência</label>
+        <input id="referencia" name="referencia" [value]="produto?.referencia" formControlName="referencia">
+      </div>
+
+      <div class="grupoInputs">
+        <label for="observacao" id="observacao">Observação</label>
+        <input id="observacao" name="observacao" [value]="produto?.observacao" formControlName="observacao">
+      </div>
+
+
+      <div class="grupoFormularioCompleto">
+        <button type="submit">Salvar</button>
+      </div>
+  </form>
 </div>

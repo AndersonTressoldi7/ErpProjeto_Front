@@ -1,6 +1,6 @@
 .divMaior{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(600px, 33.33%), 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 33.33%), 3fr));
     gap: 2px; 
     grid-auto-rows: 1fr; 
     width: 100%;

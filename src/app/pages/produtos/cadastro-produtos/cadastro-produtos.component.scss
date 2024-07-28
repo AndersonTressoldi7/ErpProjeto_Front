@@ -6,6 +6,7 @@ h1 {
   margin-top: 1%;
 }
 
+
 .divMaior {
   display: flex;
   flex-wrap: wrap;
@@ -13,6 +14,19 @@ h1 {
   gap: 5px;
   height: 100%;
   align-content: flex-start;
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  // margin: 1%;
+  // gap: 5px;
+  height: 100%;
+  // align-content: flex-start;
+}
+
+#observacao{
+  width: 100% !important;
 }
 
 .grupoInputs {
@@ -67,3 +81,4 @@ button:hover {
   vertical-align: middle;
   color: #8b51fd;
 }
+

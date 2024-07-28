@@ -16,6 +16,12 @@ import { ListagemProdutosComponent } from './pages/produtos/listagem-produtos/li
 import { HttpClientModule } from '@angular/common/http';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CadastroProdutosComponent } from './pages/produtos/cadastro-produtos/cadastro-produtos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DialogAvisoComponent } from './componentes/dialog-aviso/dialog-aviso.component';
+import { CadastroPessoasComponent } from './pages/pessoas/cadastro-pessoas/cadastro-pessoas.component';
+import { ListagemPessoasComponent } from './pages/pessoas/listagem-pessoas/listagem-pessoas.component';
+
+
 
 @NgModule({
   declarations: [
@@ -26,13 +32,20 @@ import { CadastroProdutosComponent } from './pages/produtos/cadastro-produtos/ca
     NavBarComponent,
     ListagemProdutosComponent,
     CadastroProdutosComponent,
+    DialogAvisoComponent,
+    CadastroPessoasComponent,
+    ListagemPessoasComponent,
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     MatIconModule,
     FormsModule,
     HttpClientModule,
+    MatTooltipModule,
+    MatTooltipModule,
+    FormsModule,
     MatTooltipModule
   ],
   providers: [

@@ -1,0 +1,71 @@
+<div class="tituloCadastros">
+    <h1>Cadastro de Pessoas <mat-icon>person_add</mat-icon></h1><br>
+  </div>
+  <div class="divMaior">
+  
+    <form [formGroup]="form" (ngSubmit)="salvarPessoa()">
+  
+      <div class="grupoInputs">
+        <label for="id">Id</label>
+        <input id="id" formControlName="id" required />
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" [value]="pessoa?.nome" formControlName="nome">
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="cpfCnpj">CPF ou CNPJ</label>
+        <input id="cpfCnpj" formControlName="cpfCnpj" required />
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo" [value]="pessoa?.sexo" formControlName="sexo">
+          <option value="0">Masculino</option>
+          <option value="1">Feminino</option>
+        </select>
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="cliente">Cliente</label>
+        <input type="checkbox" id="cliente" name="cliente" [checked]="pessoa?.cliente" formControlName="cliente">
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="funcionario">Funcionário</label>
+        <input type="checkbox" id="funcionario" name="funcionario" [checked]="pessoa?.funcionario" formControlName="funcionario">
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="fornecedor">Fornecedor</label>
+        <input type="checkbox" id="fornecedor" name="fornecedor" [checked]="pessoa?.fornecedor" formControlName="fornecedor">
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="cidade">Cidade</label>
+        <input type="text" id="cidade" name="cidade" [value]="pessoa?.cidade_nome" formControlName="cidade">
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" name="bairro" [value]="pessoa?.bairro" formControlName="bairro">
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="rua">Rua</label>
+        <input type="text" id="rua" name="rua" [value]="pessoa?.rua" formControlName="rua">
+      </div>
+  
+      <div class="grupoInputs">
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" [value]="pessoa?.dataNascimento" formControlName="dataNascimento">
+      </div>
+  
+      <div class="grupoFormularioCompleto">
+        <button type="submit">Salvar</button>
+      </div>
+    </form>
+  </div>
+  

@@ -1,32 +1,41 @@
-.divMaior{
+.divMaior {
     width: 100%;
     height: 100vh;
 }
 
-.filtroListagemProdutos{
+.filtroListagemPessoas {
     height: 18%;
     flex-wrap: wrap;
 }
 
-.tituloFiltros{
+.tituloFiltros {
     font-size: 25px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #afa2fb;
     margin-left: 1%;
 }
 
-.checkboxFiltros{
+.checkbox{
+    margin-right: 5px;
+
+}
+
+.inputFiltro{
+    margin-left: 5px;
+}
+
+.checkboxFiltros {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     color: #afa2fb;
     gap: 2%;
     vertical-align: middle;
 }
 
-.checkbox{
+.checkbox {
     appearance: none;
     background-color: #f0efef;
     -webkit-appearance: none;
@@ -41,19 +50,19 @@
     align-items: center;
 }
 
-.inputsFiltros{
+.inputsFiltros {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 1%;
     height: 30%;
 
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     color: #afa2fb;
 }
 
-.inputFiltro{
+.inputFiltro {
     appearance: none;
     -webkit-appearance: none;
     background-color: #f0efef;
@@ -62,63 +71,48 @@
     margin-right: 5%;
     width: 25%;
     height: 90%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     color: rgba(48, 48, 48, 0.436);
-    
 }
 
-.selecaoProdutos{
+.selecaoPessoas {
     height: 80%;
     overflow: scroll;
-     margin-top: 1%;
+    margin-top: 1%;
 }
 
-.containerSelecoesPdv{
-    height: 100% ;
+.containerSelecoesPdv {
+    height: 100%;
 }
 
-
-.linhaProduto{
-    grid-template-columns: 2fr 1fr 1fr; 
+.linhaPessoa {
+    grid-template-columns: 2fr 1fr 1fr;
     text-align: center;
-    
 }
 
-.linhaProduto:hover{
+.linhaPessoa:hover {
     cursor: pointer;
     border: 1px inset rgba(137, 43, 226, 0.436);
-    // border-color: blueviolet;
+    /* border-color: blueviolet; */
 }
-.listaProdutosPdv{
+
+.listaPessoasPdv {
     border-collapse: collapse;
-    width: 100%; 
+    width: 100%;
     background-color: #f2f2f2;
     height: 8%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     color: #afa2fb;
-   
-    
 }
 
-.checkbox{
-    margin-right: 5px;
-
+.pessoasListadasPdv {
+    padding: 10px;
+    text-overflow: ellipsis;
 }
 
-.inputFiltro{
-    margin-left: 5px;
-}
-
-.produtosListadosPdv {
-    padding: 10px; 
-    text-overflow: ellipsis; 
-
-    
-}
-
-.iconesLista{
+.iconesLista {
     vertical-align: middle;
     width: 14%;
     height: 100%;
@@ -126,11 +120,11 @@
     display: inline;
 }
 
-.iconesLista:hover{
+.iconesLista:hover {
     transform: scale(1.3);
 }
 
-.btnCadastroProduto{
+.btnCadastroPessoa {
     cursor: pointer;
     position: fixed;
     right: 30px;
@@ -147,81 +141,76 @@
     color: #8553f6;
     box-shadow: 3px 4px 9px #38050585;
     font-size: 60px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.btnCadastroProduto:hover{
+.btnCadastroPessoa:hover {
     transform: scale(1.3);
 }
 
-@media(max-width: 700px){
-    .iconesLista{
+@media(max-width: 700px) {
+    .iconesLista {
         display: none;
     }
 
-    .produtosListadosPdv{
+    .pessoasListadasPdv {
         font-size: 18px;
     }
 
-    .checkboxFiltros, .inputsFiltros{
+    .checkboxFiltros, .inputsFiltros {
         font-size: 15px;
-        
     }
 
-    .inputsFiltros{
+    .inputsFiltros {
         display: inline-block;
         flex-wrap: wrap;
-        // margin-left: 64px;
+        /* margin-left: 64px; */
         width: 80%;
-       
-        // margin-bottom: 20%;
+
+        /* margin-bottom: 20%; */
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-    
     }
 
-    .txtInputs{
+    .txtInputs {
         width: 17%;
     }
 
-    .filtroListagemProdutos{
-        // margin-bottom: 20%;
+    .filtroListagemPessoas {
+        /* margin-bottom: 20%; */
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        
     }
 
-    .inputFiltro{
+    .inputFiltro {
         width: 410px;
         height: 60%;
         margin-top: 2%;
     }
 
-    // .selecaoProdutos{
-    //     margin-top: 10%;
-    // }
+    /* .selecaoPessoas{
+        margin-top: 10%;
+    } */
 
-    .checkboxContainer{
+    .checkboxContainer {
         display: flex;
         align-items: center;
-        // width: 27%;
+        /* width: 27%; */
         flex-wrap: wrap;
         width: 50%;
     }
 
-    .checkboxFiltros{
+    .checkboxFiltros {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .checkbox{
-         width: 30px;
+    .checkbox {
+        width: 30px;
     }
-
 }
-

@@ -1,0 +1,50 @@
+<app-nav-bar></app-nav-bar>
+<div class="divMaior">
+
+  <div class="divSuperior">
+    <div class="filtroListagemPessoas">
+        <h3 class="tituloFiltros">Filtros</h3>
+        <div class="checkboxFiltros">
+            <label class="checkboxContainer">
+                <input class="checkbox" type="checkbox">Clientes
+            </label>
+            <label class="checkboxContainer">
+                <input class="checkbox" type="checkbox">Funcionários
+            </label>
+            <label class="checkboxContainer">
+                <input class="checkbox" type="checkbox">Transportadores
+            </label>
+            <label class="checkboxContainer">
+                <input class="checkbox" type="checkbox">Fornecedores
+            </label>
+        </div>
+
+        <div class="inputsFiltros">
+            <div class="txtInputs">Cnpj ou Cpf</div>
+            <input class="inputFiltro">
+            <div class="txtInputs">Nome</div>
+            <input class="inputFiltro">
+        </div>
+    </div>
+
+    <div *ngIf="1==1" class="selecaoPessoas">
+        <div class="containerSelecoesPdv">
+          <table class="listaPessoasPdv">
+            <tbody class="listaDadosPessoas">
+              <ng-container>
+                <tr *ngFor="let pessoa of pessoas; let i = index" [style.background-color]="i % 2 === 0 ? '#ebe8fd': '#ffffff'" class="linhaPessoa" (click)="abrirPessoa(pessoa.id)">
+                  <td class="pessoasListadasPdv"> <mat-icon class="iconesLista"> border_color</mat-icon> Id: {{ pessoa.id }}</td>
+                  <td class="pessoasListadasPdv"> <mat-icon class="iconesLista">search</mat-icon> {{ pessoa.nome }}</td>
+                  <td class="pessoasListadasPdv"> <mat-icon class="iconesLista">widgets</mat-icon> CPF/CNPJ: {{ pessoa.cpfCnpj }} </td>
+                  <td class="pessoasListadasPdv"> <mat-icon class="iconesLista"> attach_money</mat-icon> Sexo: {{ pessoa.sexo }} </td>
+                  <td class="pessoasListadasPdv"> <mat-icon class="iconesLista"> edit_location</mat-icon> Cidade: {{ pessoa.cidade_nome }}</td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+        </div>
+    </div>
+
+    <div class="btnCadastroPessoa" matTooltip="Clique aqui para cadastrar uma nova pessoa" (click)="cadastrarNovaPessoa()">+</div>
+  </div>
+</div>
