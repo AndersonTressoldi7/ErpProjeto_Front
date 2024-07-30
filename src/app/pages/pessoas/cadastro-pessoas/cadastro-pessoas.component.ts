@@ -4,6 +4,8 @@ import { Pessoa } from '../../../models/pessoa';
 import { PessoasService } from '../../../services/pessoas/pessoas.service';
 import { isEqual, cloneDeep } from 'lodash';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Cidade } from '../../../models/cidade';
+import { CidadesService } from '../../../services/cidades/cidades.service';
 
 @Component({
   selector: 'app-cadastro-pessoas',
@@ -16,17 +18,22 @@ export class CadastroPessoasComponent implements OnInit {
   public form!: FormGroup;
   public proximoId!: number;
   public formularioEvalido: boolean = true;
+  public cidades!: Cidade[];
 
   constructor(
     public dialogRef: MatDialogRef<CadastroPessoasComponent>,
     @Inject(MAT_DIALOG_DATA) public pessoa: Pessoa,
     private pessoaService: PessoasService,
     private fb: FormBuilder,
+    private cidadeService: CidadesService
   ) {
     this.pessoaOriginal = cloneDeep(pessoa);
   }
 
   ngOnInit(): void {
+
+    this.buscarCidades();
+    
     if (!this.pessoa) {
       this.pessoaService.retornaProximoId().subscribe(
         (response: number) => {
@@ -39,6 +46,9 @@ export class CadastroPessoasComponent implements OnInit {
         }
       );
     }
+    
+    console.log('a pessoa cliente: ', this.pessoa?.cliente);
+    console.log('a pessoa é: ', this.pessoa?.funcionario);
 
     this.form = this.fb.group({
       id: [{ value: this.pessoa?.id ?? '', disabled: true }],
@@ -57,6 +67,8 @@ export class CadastroPessoasComponent implements OnInit {
     if (this.pessoa) {
       this.editando = true;
     }
+
+  
   }
 
   salvarPessoa() {
@@ -71,6 +83,18 @@ export class CadastroPessoasComponent implements OnInit {
     }
 
     this.onClose();
+  }
+
+  buscarCidades(): void{
+   this.cidadeService.buscarTodasAsCidades().subscribe(
+      (dados: Cidade[]) => {
+        this.cidades = dados;
+        console.log(this.cidades);
+      },
+      (erro) => {
+        console.error('erro ao buscar cidades', erro);
+      }
+    );
   }
 
   onClose(): void {

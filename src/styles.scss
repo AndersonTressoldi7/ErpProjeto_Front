@@ -58,10 +58,14 @@ p {
 }
 
 input{
-	appearance: none;
-    -webkit-appearance: none;
+	
     outline: none;
 }
+
+input[type="checkbox"].checkbox:focus {
+	outline: none;
+	box-shadow: none;
+  }
 
 
 

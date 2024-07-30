@@ -1,85 +1,107 @@
 h1 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    vertical-align: middle;
-    margin-top: 1%;
-  }
-  
-  
-  .divMaior {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1%;
-    gap: 5px;
-    height: 100%;
-    align-content: flex-start;
-  }
-  
-  form{
-    display: flex;
-    flex-wrap: wrap;
-    // margin: 1%;
-    // gap: 5px;
-    height: 100%;
-    // align-content: flex-start;
-  }
-  
-  #observacao{
-    width: 100% !important;
-  }
-  
-  .grupoInputs {
-    flex: 1 1 calc(50% - 10px);
-    min-width: 30%;
-    margin-bottom: 5px;
-    height: 10%;
-  }
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-top: 1%;
+}
 
-  .grupoInputs label {
-    margin-bottom: 1px;
-    font-weight: bold;
-  }
-  
-  .grupoInputs input, .grupoInputs textarea, .grupoInputs select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .grupoInputs textarea {
-    resize: vertical;
-  }
-  
-  .grupoFormularioCompleto {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    // margin-top: 10px;
-  }
-  
-  button {
-    background-color: #8b51fd;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-  
-  button:hover {
-    background-color: #6d3eb3;
-  }
-  
-  .mat-icon {
-    font-size: 50px;
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-    color: #8b51fd;
-  }
-  
-  
+.divMaior {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1%;
+  gap: 5px;
+  height: 100%;
+  align-content: flex-start;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+#observacao {
+  width: 100% !important;
+}
+
+.grupoInputs {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 30%;
+  margin-bottom: 5px;
+  height: 10%;
+}
+
+.grupoInputs label {
+  margin-bottom: 1px;
+  font-weight: bold;
+}
+
+.grupoInputs input,
+.grupoInputs textarea,
+.grupoInputs select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.grupoInputs input[type="checkbox"] {
+  width: auto;
+  margin-top: 10px;
+}
+
+.grupoInputs textarea {
+  resize: vertical;
+}
+
+.grupoFormularioCompleto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+button {
+  background-color: #8b51fd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #6d3eb3;
+}
+
+.mat-icon {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  color: #8b51fd;
+}
+
+.CadastroPessoaCheckbox{
+  margin-right: 5px;
+}
+
+.grupoCheckbox{
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+input[type="checkbox"]:checked,input[type="radio"]:checked {
+    background-color: #8553f6;
+}
+
+input[type="radio"]{
+  border-radius: 50%;
+}

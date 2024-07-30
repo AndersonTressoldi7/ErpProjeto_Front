@@ -60,6 +60,12 @@ form{
   // margin-top: 10px;
 }
 
+.grupoCheckbox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 button {
   background-color: #8b51fd;
   color: #fff;
@@ -81,4 +87,6 @@ button:hover {
   vertical-align: middle;
   color: #8b51fd;
 }
+
+
 
